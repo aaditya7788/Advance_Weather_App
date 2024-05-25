@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// Import necessary libraries and components
+import React from "react";
+import CurrentLocation from "./currentLocation"; // Assuming this component handles current location weather display
+import "./App.css"; // Importing CSS styles for the App component
 
-export default function App() {
+// Define the App functional component
+function App() {
+  // Return JSX representing the structure of the UI
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <React.Fragment>
+      {/* Container div to hold the main content */}
+      <div className="container">
+        {/* Render the CurrentLocation component */}
+        <CurrentLocation />
+      </div>
+      {/* Footer section with additional information and links */}
+      
+    </React.Fragment>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// Export the App component as the default export
+export default App;
